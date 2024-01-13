@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favico -->
+    <link rel="shortcut icon" href="./img/favico.ico" type="image/x-icon">
+    <!-- FontFace -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>CHAT-LOOM</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigation">
+            <div id="logo-texto">
+                <a href="http://">Chat-<span id="logo-step">Loom</span><i
+                        class='bx bxs-comment-dots bx-tada bx-flip-horizontal' style='color:#00a86b'></i></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="http://">Home</a></li>
+                <li class="nav-item"><a href="http://">About</a></li>
+                <li class="nav-item"><a href="http://">Menu</a></li>
+                <li class="nav-item"><a href="http://">Chat</a></li>
+                <i class='bx bx-search'></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="container-master">
+
+        <div class="container-home">
+            <div class="home-img ">
+                <img src="./img/img-logo.webp" id="img-lgt" alt="logo balão Emoji animado">
+                <img src="./img/logo-Original.webp" id="img-or" alt="logo balão Emoji animado">
+            </div>
+
+            <div class="home-text">
+                <h4 id="text-h4">Olá!</h4>
+                <h1 id="text-h1">Seja muito bem-vindo(a),</h1>
+                <p>Na <strong><i>agenda anline</i></strong> - <span id="logo">Chat-<span
+                            id="logo-step">Loom</span></span>, onde cada palavra tece uma
+                    experiência única...<i class='bx bxs-comment-dots'></i></i></p>
+                <!-- <a href="http://">Order yours</a> -->
+                <div class="container-1">
+                    <P> "<i>...Que tal experimentar de forma <strong>gratuita</strong>, esta agenda? simplifique a
+                            gestão de suas conexões"</i> </P>
+
+                    <!-- Criando o Formulário de registor -->
+                    <form id="form-agenda">
+                        <input type="text" id="name-persona" name="Nome do contato" required placeholder="Nome">
+                        <input type="tel" id="phone-number" name="phone-number" maxlength="13" required
+                            placeholder="99 99999-9999">
+                        <button type="submit" id="btn-cadastrar">Adicionar</button>
+                    </form>
+
+                    <div class="container-2">
+                        <table cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Contato</th>
+                                    <th>Numero</th>
+                                    <th><img src="./img/Book.png" alt="Agenda"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy; <span id="logo">Chat-<span id="logo-step">Loom</span></span> - 2024. Todos os direitos <br>
+                <small>Full Stack Python Developer - Augusto Cedric</small>
+            </p>
+        </div>
+    </footer>
+
+    <!-- adicionando a funcionalidade -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,547 @@
+ /*--------------------------------------------------------*/
+ /*                   INICIALIZANDO                        */
+ /*--------------------------------------------------------*/
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+ /***Zerando toda estilização ---------------------------- */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     list-style: none;
+     text-decoration: none;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ /***Definindo paleta de cores para o projeto------------- */
+ /*   >> Irei utilizar atribuição de variaveis p/ rganizar */
+
+ :root {
+
+     /* >>definindo cor principal do projeto */
+     --fnt-azul-profundo: #004080;
+     --fnt-azul-logo: #0274c0;
+
+     --fnt-verde-vivo: #00A86B;
+     --fnt-verde-vivo-v2: #00cf83;
+     --fnt-verde-logo: #52DC01;
+
+     --fnt-laranja-logo: #FF7402;
+     --fnt-laranja-energetico: #FFA500;
+     --fnt-amarelo-logo: #FCB502;
+     --fnt-amarelo-light-logo: #ffffe1;
+     --fnt-vermelho-logo: #e40202;
+
+     --fnt-white: #ffffff;
+     --fnt-black: #04030a;
+     --fnt-cinza-moderno: #505050;
+
+     --rgba-cinza: rgba(80, 80, 80, 0.1);
+
+ }
+
+ /***Definindo a tipografia geral-------------------------- */
+ body {
+     /* overflow-x: hidden; */
+     font-family: "Poppins", sans-serif;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 1.625;
+     color: var(--font-color-grafit);
+     margin: 0 auto;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     color: var(--font-color-grafit-bold);
+     font-weight: 700;
+     margin: 0;
+     line-height: 1.2;
+ }
+
+ p {
+     text-align: left;
+ }
+
+ h1 {
+     font-size: 36px;
+ }
+
+ h2 {
+     font-size: 30px;
+ }
+
+ h3 {
+     font-size: 24px;
+ }
+
+ h4 {
+     font-size: 18px;
+ }
+
+ h5 {
+     font-size: 15px;
+ }
+
+ h6 {
+     font-size: 13px;
+ }
+
+ blockquote {
+     margin: 0;
+ }
+
+ strong {
+     font-weight: 700;
+ }
+
+ /***Régua vermelha para ter visão de espaço dos elementos- */
+ /*  >> basta colocar "regua" em qualquer nome de tag + 'regua' e ele mostra  */
+ .regua {
+     border: 1px solid red;
+ }
+
+ /*--------------------------------------------------------*/
+ /*                BODY-HEADER                             */
+ /*--------------------------------------------------------*/
+
+ .navigation {
+
+     /* >>coloca os itens um ao lado do outros */
+     display: flex;
+     /* >>alinhar os objetos centralizados ao meio */
+     align-items: center;
+     /* >>ajusta a distribuição dentro do mesmo container*/
+     justify-content: space-between;
+     /* >>adiciona espaçamento interna do objeto */
+     padding: 18px 40px;
+     /* >>aficionado uma sobra abaixo do Menu para delimitação  */
+     box-shadow: 0 0.1rem 0.5rem var(--fnt-cinza-moderno);
+     /* >>delimitando o tamanho maximo da pagina em monitores */
+     /* width: 1280px; */
+     /* >>definindo quanto deste tamanho o elemento deve se posicionar ocupando */
+     width: 100%;
+     /* >>adicionando um  background branco */
+     background: var(--fnt-white);
+     /* >>aplicando uma transição para interação do usuario */
+     transition: all 0.5s;
+     /* >>aplicando uma posição fixa para deixar o menu travado no superiro */
+     position: fixed;     
+     
+ }
+
+ /* | Aplicando um designer na logo | */
+
+
+ #logo-texto a,
+ #logo-texto a #logo-step,
+ .home-text #logo,
+ .home-text #logo-step {
+     /* >>aplicando a font Google escolhida para o estilo da fonte */
+     font-family: 'Montserrat Subrayada', sans-serif;
+     /* >>aplicando tamanho à fonte da logo */
+     font-size: 1.7rem;
+     /* >>aplicando peso e encorpamento ao estilo da fonte da logo */
+     font-weight: 700;
+ }
+
+ .bx {
+     color: var(--fnt-black);
+ }
+
+ /* >>aplicando cor azul no estilizando a logo */
+
+ footer div p #logo,
+ #logo-texto a,
+ .home-text #logo {
+
+     /* colocar cor azul no id logo */
+     color: var(--fnt-azul-logo);
+     font-family: 'Montserrat Subrayada', sans-serif;
+
+ }
+
+ /* >>aplicando cor Laranja no estilo da logo  */
+
+ footer div p #logo-step,
+ #logo-texto a #logo-step,
+ .home-text #logo-step {
+     color: var(--fnt-laranja-logo);
+     font-family: 'Montserrat Subrayada', sans-serif;
+
+ }
+
+ .home-text #logo,
+ .home-text #logo-step {
+     font-size: 14px;
+ }
+
+ /* | Aplicando estilo a lista não ordenada do container */
+
+ /* >>lista não ordenada */
+ .navigation ul {
+     display: flex;
+     align-items: center;
+     /* >>aplicando um estapaçamento entre os titulos da lista não ordenada */
+     gap: 5rem;
+
+ }
+
+ .navigation ul li {
+     color: var(--fnt-cinza-moderno);
+     font-size: 17px;
+     font-weight: 500;
+     transition: all 0.5s;
+ }
+
+
+ /* >>aplicando hover para melhor interação do usuario */
+ .navigation ul li a:hover {
+
+     color: var(--fnt-laranja-logo);
+
+ }
+
+ /* aplicando curso point  */
+ .navigation i {
+     cursor: pointer;
+     font-size: 1.5rem;
+ }
+
+ /* |Criando o botão estilo HAMBURG para quando estiver na visão Mobile */
+ .menu {
+
+     cursor: pointer;
+     /* >>esconder a visão deste curso quando pagina exibida fora do Mobile */
+     display: none;
+ }
+
+ .menu .bar {
+     display: block;
+     width: 28px;
+     height: 3px;
+     border-radius: 3px;
+     background: var(--fnt-cinza-moderno);
+     margin: 5px auto;
+     transition: all 0.3s;
+ }
+
+
+ .menu .bar:nth-child(1),
+ .menu .bar:nth-child(3) {
+     background: var(--fnt-laranja-logo);
+ }
+
+ .menu .bar:nth-child(2) {
+     background: var(--fnt-azul-logo);
+ }
+
+ /* | Estilizando o container-home | */
+
+
+
+ .container-master {
+
+     display: block;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0px 10%;
+
+ }
+
+ .container-home {
+
+     width: 100vw;
+     max-width: 100%;
+     height: 80vh;
+     max-height: 100%;
+     display: flex;
+     justify-content: center;
+     padding: 0 auto;
+     gap: 2rem;
+ }
+
+ .home-text {
+     max-width: 47rem;
+ }
+
+ .container-home .home-text {
+     margin-top: 7%;
+ }
+
+ .home-text #text-h4 {
+     font-size: 1.5rem;
+     color: var(--fnt-laranja-logo);
+     margin-bottom: 1rem;
+ }
+
+ form {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ form input {
+
+     font-size: 18px;
+     background-color: var(--fnt-amarelo-light-logo);
+     border: none;
+     border-bottom: 2px solid var(--fnt-cinza-moderno);
+     padding: 8px;
+ }
+
+
+ form button {
+     background: var(--fnt-verde-vivo);
+     color: var(--fnt-white);
+     font-size: 18px;
+     font-weight: bold;
+     border: none;
+     cursor: pointer;
+     padding: 8px;
+     border-radius: 9px;
+ }
+
+ form button:hover {
+     background: var(--fnt-verde-vivo-v2);
+     color: var(--fnt-white);
+
+ }
+
+ .home-text #text-h1, {
+     font-size: 4rem;
+     margin-bottom: 1rem;
+     line-height: 4rem;
+ }
+
+
+ .home-text p {
+     margin-bottom: 15px;
+ }
+
+
+ .container-1>p {
+     font-size: 14px;
+ }
+
+
+ .home-img #img-lgt {
+     width: 100%;
+     margin-top: 15%;
+ }
+
+ .home-img #img-or {
+     display: none;
+ }
+
+ .container-2 {
+     margin-top: 25px;
+ }
+
+
+ table {
+     width: 100%;
+ }
+
+ table th {
+     border-bottom: 2px solid var(--fnt-cinza-moderno);
+     padding: 16px 0px;
+     font-size: 24px;
+     text-align: center;
+     font-weight: bold;
+     align-items: center;
+
+ }
+
+ table th img {
+     width: 30px;
+     padding-top: 18px;
+
+ }
+
+ 
+
+ table td {
+     text-align: center;
+     font-size: 16px;
+     padding: 16px 0;
+     border-bottom: 1px solid var(--rgba-cinza);
+ }
+
+ table td img {
+     height: 60px;
+ }
+
+
+ table th:nth-child(1),
+ table td:nth-child(1) {
+     text-align: left;
+ }
+
+ footer {
+     width: 100vw;
+     max-width: 100%;
+     height: auto;
+     max-height: 100%;
+     display: flex;
+     justify-content: center;
+     padding: 0 auto;
+     gap: 2rem;
+
+ }
+
+ footer p {
+     text-align: center;
+ }
+
+
+ .home-img img {
+     width: 100%;
+ }
+
+ /*--------------------------------------------------------*/
+ /*          INICIALIZANDO O RESPONSIVO                     */
+ /*--------------------------------------------------------*/
+
+ @media(max-width:768px) {
+
+     .navigation {
+         padding: 18px 20px;
+
+     }
+
+     .menu {
+         display: block;
+     }
+
+     /* criando ação do Hunburg virar um 'X' junto com Js */
+     /* Inicio -------------------------------------------- */
+     .menu.ativo .bar:nth-child(1) {
+         transform: translateY(8px) rotate(45deg);
+         background: var(--fnt-vermelho-logo);
+     }
+
+     .menu.ativo .bar:nth-child(2) {
+         opacity: 0;
+     }
+
+
+     .menu.ativo .bar:nth-child(3) {
+         transform: translateY(-8px) rotate(-45deg);
+         background: var(--fnt-vermelho-logo);
+     }
+
+     /* Fim -------------------------------------------- */
+
+     .nav-menu {
+         position: fixed;
+         right: -100%;
+         top: 8%;
+         width: 100%;
+         max-width: 100%;
+         height: 100%;
+         max-height: 100%;
+         flex-direction: column;
+         background: var(--fnt-white);
+         gap: -10px;
+         transition: all 0.3s;
+     }
+
+     .nav-menu.ativo {
+         right: 0;
+     }
+
+     .nav-item {
+         margin: 16px 0;
+     }
+
+     .container-home {
+         padding: 100px 2%;
+         flex-direction: column;
+         text-align: left;
+         overflow: hidden;
+         gap: 1rem;
+         height: auto;
+     }
+
+
+     .home-img #img-lgt {
+         display: none;
+     }
+
+
+     .container-home #img-or {
+         width: 100%;
+         /* margin-top: 100%; */
+         justify-items: center;
+         margin-left: 5%;
+         display: block;
+         /* transition: all 0.3s; */
+     }
+
+     .container-home .text-h4 {
+         font-size: 15px;
+     }
+
+     .container-home .text-h1 {
+         font-size: 2.5rem;
+         line-height: 3rem;
+     }
+
+     .container-1>p {
+         display: none;
+     }
+
+     form {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         /* margin-bottom: 2px; */
+
+     }
+
+     input {
+         margin-bottom: 20px;
+
+     }
+
+
+     footer {
+         background: var(--fnt-azul-logo);
+         opacity: 80%;
+         padding: 40px 0px;
+     }
+
+     footer p {
+         color: var(--fnt-white);
+     }
+
+
+
+     footer div p #logo {
+
+         /* colocar cor azul no id logo */
+         color: var(--fnt-white);
+         font-family: 'Montserrat Subrayada', sans-serif;
+
+     }
+
+     /* >>aplicando cor Laranja no estilo da logo  */
+
+     footer div p #logo-step {
+         color: var(--fnt-laranja-energetico);
+         font-family: 'Montserrat Subrayada', sans-serif;
+
+     }
+
+
+
+
+
+
+ }
